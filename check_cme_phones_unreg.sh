@@ -26,7 +26,7 @@ REG=`/usr/bin/snmpwalk $HOST -v 2c -c $COMMUNITY -Ovq iso.3.6.1.4.1.9.9.439.1.2.
 
 UNREG=$(echo "$TOT - $REG" | bc)
 
-output="$UNREG Unregisterd Phone(s)"
+output="$UNREG Unregisterd Phone(s) | Phones_Tot=$TOT, Phones_Reg=$REG, Phones_Unreg=$UNREG"
 
 
 # check unregistertd phones with warn / crit and generate Nagios output
